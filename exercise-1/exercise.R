@@ -28,7 +28,7 @@ worst.hwy <- two.wheels[two.wheels$hwy == min(two.wheels$hwy), "id"]
 # The vehicle that gets the most hwy miles/gallon of vehicles of that make in that year
 most.hwy <- function(year, make) {
   filter <- vehicles[vehicles$make == make & vehicles$year == year, ]
-  return(filter[filter$hwy == max(filter$hwy)], )
+  return(filter[filter$hwy == max(filter$hwy), ])
 }
 
 # What was the most efficient honda model of 1995?
